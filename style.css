@@ -1,0 +1,226 @@
+/* ===========================
+   CSS Reset & Base
+   =========================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #1a5276;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   Document Container
+   =========================== */
+.document-container {
+    max-width: 860px;
+    margin: 32px auto;
+    background: #fff;
+    padding: 48px 52px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+/* ===========================
+   Header
+   =========================== */
+.cv-header {
+    text-align: center;
+    border-bottom: 2px solid #1a5276;
+    padding-bottom: 20px;
+    margin-bottom: 24px;
+}
+
+.cv-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #1a3a52;
+}
+
+.cv-header p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+.cv-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #444;
+}
+
+.cv-contact span {
+    color: #888;
+}
+
+.cv-contact a {
+    color: #1a5276;
+}
+
+/* ===========================
+   Sections
+   =========================== */
+.cv-section {
+    margin-bottom: 28px;
+}
+
+.cv-section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1a5276;
+    border-bottom: 1px solid #c5d8e8;
+    padding-bottom: 4px;
+    margin-bottom: 14px;
+}
+
+/* ===========================
+   Text Block
+   =========================== */
+.cv-text-block {
+    color: #333;
+    text-align: justify;
+}
+
+/* ===========================
+   Skills Grid
+   =========================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 28px;
+}
+
+.skill-category-title {
+    font-weight: 600;
+    color: #1a3a52;
+    margin-bottom: 2px;
+    font-size: 0.9rem;
+}
+
+.skill-list {
+    color: #444;
+    font-size: 0.88rem;
+}
+
+/* ===========================
+   CV Items
+   =========================== */
+.cv-item {
+    margin-bottom: 18px;
+}
+
+.cv-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.cv-item-title {
+    font-size: 0.97rem;
+    font-weight: 600;
+    color: #1a3a52;
+}
+
+.cv-item-date {
+    font-size: 0.85rem;
+    color: #666;
+    white-space: nowrap;
+}
+
+.cv-item-subtitle {
+    font-size: 0.88rem;
+    color: #555;
+    font-style: italic;
+    margin-top: 2px;
+}
+
+.cv-item-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #1a5276;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+/* ===========================
+   Bullet List
+   =========================== */
+.cv-bullet-list {
+    margin-top: 6px;
+    padding-left: 20px;
+    color: #333;
+}
+
+.cv-bullet-list li {
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   Print Styles
+   =========================== */
+@media print {
+    body {
+        background-color: #fff;
+        font-size: 11pt;
+    }
+
+    .document-container {
+        margin: 0;
+        padding: 20px;
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 640px) {
+    .document-container {
+        margin: 0;
+        padding: 24px 18px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-item-header {
+        flex-direction: column;
+    }
+}
